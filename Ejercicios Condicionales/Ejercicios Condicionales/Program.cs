@@ -456,31 +456,299 @@ namespace Ejercicios_Condicionales
                     Console.WriteLine("No hay digitos en comun entre los 2 numeros");
                 }
             }
-            */
+            
             //Comprobar si se ha pagado la entrada. 
             //Si se ha pagado, mostramos mensaje "Bienvenido",si no mostrar mensaje "Tienes que pagar la entrada".
 
-            bool entrada;
+            bool entradaPagada;
             bool clienteVip;
-            bool saldo;
-
+            int saldo;
+            
             Console.WriteLine("¿Has pagado la entrada?.Diga si o no.");
-            bool si; //es booleano porque es true o false
-            bool no;
+            string respuesta = Console.ReadLine();
+            
+            if (respuesta=="si")
+            {
+                entradaPagada = true;
+            }
+            else
+            {
+                entradaPagada = false;
+            }
 
-            si = Convert.ToBoolean(Console.ReadLine());
-            no = Convert.ToBoolean(Console.ReadLine());
+            if (entradaPagada)
+            {
+                Console.WriteLine("Bienvenido");
+            }
+            else
+            {
+                Console.WriteLine("Pague la entrada");
+            }
 
-                if (si)
-                {
-                    Console.WriteLine("Bienvenido");
-                }
-                else
-                {
-                    Console.WriteLine("Pague la entrada");
-                }
+            Console.WriteLine("Eres VIP?");
+            string respuesta2 = Console.ReadLine();
+
+            if (respuesta2 == "si")
+            {
+                clienteVip = true;
+            }
+            else
+            {
+                clienteVip = false;
+            }
+
+            if (clienteVip)
+            {
+                Console.WriteLine("Bienvenido.Que pase un buen dia");
+            }
+            else
+            {
+                Console.WriteLine("Bienvenido");
+            }
+
+            Console.WriteLine("Por cierto,que saldo tienes?");
+            saldo = Convert.ToInt32(Console.ReadLine());
+
+            if (saldo>=0 )
+            {
+                Console.WriteLine("Bienvenido");
+            }
+
+            Console.WriteLine("Hola,eres cliente VIP?");
+            string respuesta3 = Console.ReadLine();// esta es una forma mas rapida de usar un texto escrito en la consola
+            Console.WriteLine("Cuanto saldo tienes?");
+            int respuesta4;
+            respuesta4 = Convert.ToInt32(Console.ReadLine());
+
+            if (respuesta3== "si" && respuesta4>=0)
+            {
+                Console.WriteLine("Bienvenido");
+            }
+            
+            //Resultado de carrera. Hacer varios programas en los que se le pregunta al usuario 
+            //el puesto en el que acabó. Después:
+
+            //Si el valor de puesto es 1 mostramos mensaje con "Ganaste", si no "Lo importante es participar”.
+
+
+            Console.WriteLine("En que puesto has quedado en la carrera?");
+            int respuesta;
+            respuesta = Convert.ToInt32(Console.ReadLine());
+
+            if (respuesta == 1)
+            {
+                Console.WriteLine("Ganaste");
+            }
+            else
+            {
+                Console.WriteLine("Lo importante es participar");
+            }
+            //Si el valor de puesto es 1, mostramos mensaje con "Medalla de oro", si el valor de puesto es 2,
+            //mostramos el mensaje con "Medalla de plata", si es 3 "Medalla de bronce" y al resto "Lo importante " +
+            //"es participar.
+            Console.WriteLine("En que puesto has quedado en la carrera?");
+            int respuesta2;
+            respuesta2 = Convert.ToInt32(Console.ReadLine());
+
+            if (respuesta2 == 1)
+            {
+                Console.WriteLine("Medalla de oro");
+            }
+            else if (respuesta2 == 2)
+            {
+                Console.WriteLine("Medalla de plata");
+            }
+            else if (respuesta2 == 3)
+            {
+                Console.WriteLine("Medalla de bronce");
+            }
+
+            else
+            {
+                Console.WriteLine("Lo importante es participar");
+
+            }
+            
+            //Con switch: Si el valor de puesto es 1, mostramos mensaje con "Medalla de oro", 
+            //si el valor de puesto es 2, mostramos el mensaje con "Medalla de plata", si es 3 
+            //  "Medalla de bronce" y al resto "Lo importante es participar.
+
+            Console.WriteLine("En que puesto has quedado en la carrera?");
+            int respuesta3;
+            respuesta3 = Convert.ToInt32(Console.ReadLine());
+
+            switch (respuesta3)
+            {
+                case 1:
+                    Console.WriteLine("Medalla de oro");
+                    break;
+
+                case 2:
+                    Console.WriteLine("Medalla de plata");
+                    break;
+
+                case 3:
+                    Console.WriteLine("Medalla de bronce");
+                    break;
+
+                default:
+                    Console.WriteLine("Lo importante es participar");
+                    break;
+
+
+            }
+            
+            //Los puestos 1, 2 y 3 ven el mensaje "Sube al podium", el resto ven el mensaje
+            //"Se acabó la carrera".Hazlo usando un if/else y usando switch
+            Console.WriteLine("En que puesto has quedado en la carrera?");
+            int respuesta3;
+            respuesta3 = Convert.ToInt32(Console.ReadLine());
+
+            switch (respuesta3)
+            {
+                case 1:
+                    Console.WriteLine("Sube al podium");
+                    break;
+
+                case 2:
+                    Console.WriteLine("Sube al podium");
+                    break;
+
+                case 3:
+                    Console.WriteLine("Sube al podium");
+                    break;
+
+                default:
+                    Console.WriteLine("Se acabo la carrera");
+                    break;
+
+
+            }
+
+            Console.WriteLine("En que puesto has quedado en la carrera?");
+            int respuesta2;
+            respuesta2 = Convert.ToInt32(Console.ReadLine());
+
+            if (respuesta2 == 1 || respuesta2 == 2|| respuesta2 == 3)
+            {
+                Console.WriteLine("Sube al podium");
+            }        
+            else
+            {
+                Console.WriteLine("Se acabo la carrera");
+            }
+            
+            //Si la edad es igual o inferior 
+            //a 8 mostramos mensaje "Pasa al tobogán", si no mostramos "Eres demasiado mayor para usar el tobogán" 
+
+            Console.WriteLine("Cuantos años tienes?");
+            int edad;
+            edad = Convert.ToInt32(Console.ReadLine());
+
+            if (edad<=8)
+            {
+                Console.WriteLine("Pasa al tobogan");
+            }
+            else
+            {
+                Console.WriteLine("Eres demasiado mayor para usar el tobogan");
+            }
+            
+            //Comprobar un string que tenga el valor del día de la semana(lunes, martes, ...).
+            //Mostrar en pantalla el día que dice que es si es entre lunes y viernes
+            //(Por ejemplo "Hoy es lunes") y si es fin de semana mostrar "Es fin de semana" Con switch y con if else.
+
+            Console.WriteLine("Dime un dia de la semana");
+            string semana = Console.ReadLine();
+
+            if (semana== "lunes")
+            {
+                Console.WriteLine("Hoy es lunes");
+            }
+            if (semana == "martes")
+            {
+                Console.WriteLine("Hoy es martes");
+            }
+            if(semana == "miercoles")
+            {
+                Console.WriteLine("Hoy es miercoles");
+            }
+            if (semana == "jueves")
+            {
+                Console.WriteLine("Hoy es jueves");
+            }
+            if (semana == "viernes")
+            {
+                Console.WriteLine("Hoy es viernes");
+            }
+            if (semana == "sabado")
+            {
+                Console.WriteLine("Hoy es fin de semana");
+            }
+            if (semana == "domingo")
+            {
+                Console.WriteLine("Hoy es fin de semana");
+            }
 
             
+            //A partir de un valor de número entero, mostrar el mensaje "El valor absoluto de -7 es 7".
+            //Si es menor que cero mostrar el valor en positivo, si es positivo o cero mostrar ese mismo valor.
+
+            Console.WriteLine("Dime un numero");
+            int respuesta2;
+            respuesta2 = Convert.ToInt32(Console.ReadLine());
+
+            if (respuesta2<0)
+            {
+                Console.WriteLine("El numero es negativo " + -respuesta2);
+            }
+            if (respuesta2>=0)
+            {
+                Console.WriteLine("El numero es positivo " + respuesta2);
+            }
+
+            
+            //Decir el número de helados que queremos comprar. Cada helado vale 2 euros. 
+            //Si compramos más de 10 helados, nos regalan uno gratis. Mostrar en pantalla 
+            //el número de helados que nos dan y cuánto hemos pagado por ellos.
+
+            Console.WriteLine("Cuantos helados quieres?");
+            int helado;
+            helado = Convert.ToInt32(Console.ReadLine());
+            int precio;
+            precio = helado * 2;
+             
+            if (helado<10 && helado>=1)
+            {
+                Console.WriteLine("Tienes " + helado + " helados y te van a costar " + precio + " euros");
+            }
+            else if(helado>=10 )
+            {
+                Console.WriteLine("Tienes " + (helado + 1) + " helados y te van a costar " + precio + " euros");
+            }
+            */
+
+            //Tenemos dos números, un numerador y un dividendo. Si el dividendo no es cero, 
+            //mostramos el resultado de dividir el numerador por el dividendo. Si el dividendo es cero,
+            //mostramos el mensaje "No se puede dividir por cero"
+
+            Console.WriteLine("Dame 2 numeros");
+            int numerador, dividendo;
+            numerador = Convert.ToInt32(Console.ReadLine());
+            dividendo = Convert.ToInt32(Console.ReadLine());
+
+            if (dividendo!=0)
+            {
+                Console.WriteLine("El resultado de dividir el numerador por el dividendo es " + numerador / dividendo);
+            }
+            else if (dividendo==0)
+                    {
+                Console.WriteLine("No se puede dividir por cero");
+                    }
+            
+
+
+
 
 
 
@@ -488,15 +756,12 @@ namespace Ejercicios_Condicionales
 
 
             Console.ReadLine();
+
+
         }
-
-       
-
-            
-
-
-       
     }
-            
 }
+
+            
+
             
