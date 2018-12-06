@@ -679,7 +679,7 @@ namespace Ejercicios_Condicionales
             }
             if (semana == "viernes")
             {
-                Console.WriteLine("Hoy es viernes");
+                Console.WriteLine("Hoy es viernes") ;
             }
             if (semana == "sabado")
             {
